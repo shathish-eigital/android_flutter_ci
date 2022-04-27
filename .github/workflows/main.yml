@@ -49,11 +49,3 @@ jobs:
           name: release-apk
           path: build/app/outputs/apk/release/app-release.apk
 
-      - run: flutter build web
-      # build web
-      - uses: shathish/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
-          BASE_BRANCH: master
-          BRANCH: gh-pages
-          FOLDER: build/web
